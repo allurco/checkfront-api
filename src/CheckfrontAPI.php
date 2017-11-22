@@ -115,6 +115,7 @@ class CheckfrontAPI {
 			$this->redirect_uri = isset($config['redirect_uri']) ? $config['redirect_uri'] : '';
 			$this->tokens();
 		}
+		
 	}
 
 	/**

@@ -39,6 +39,6 @@ class CheckfrontServiceProvider extends ServiceProvider {
     }
 
     public function provides() {
-        return ['mongo'];
+        return ['checkfront'];
     }
 }
