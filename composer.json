@@ -1,0 +1,12 @@
+{
+    "name": "allurco/checkfront-api",
+    "description": "A Laravel wrapper for the Checkfront API PHP SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rogers Sampaio",
+            "email": "r@allur.co"
+        }
+    ],
+    "require": {}
+}
