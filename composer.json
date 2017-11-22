@@ -1,5 +1,5 @@
 {
-    "name": "allurco/checkfront-api",
+    "name": "allurco/checkfront",
     "description": "A Laravel wrapper for the Checkfront API PHP SDK",
     "license": "MIT",
     "authors": [
@@ -8,5 +8,20 @@
             "email": "r@allur.co"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Allurco\\Checkfront\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Allurco\\Checkfront\\CheckfrontServiceProvider"
+            ],
+            "aliases": {
+                "Checkfront": "Allurco\\Checkfront\\CheckfrontFacade"
+            }
+        }
+    }
 }

@@ -42,6 +42,8 @@
  * @access public
  * @package Checkfront
 */
+namespace Allurco\Checkfront;
+
 class CheckfrontAPI {
 
 	protected $sdk_version = '1.3';
