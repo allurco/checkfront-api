@@ -299,7 +299,7 @@ class CheckfrontAPI {
 
 		$url = $this->oauth_url . '/token/';
 		if($tokens = $this->call($url,$data)) {
-			if($tokens['error']) {
+			if(array_key_exists('error', $tokens)) {
 				return false;
 			} else {
 				$this->tokens($tokens);
@@ -340,12 +340,12 @@ class CheckfrontAPI {
 	/**
 	 * Get expire token datetime
 	 *
-	 * @param integer $time seconds to expore
+	 * @param integer $time seconds to expire
 	 *
 	 * @return integer unix date - expire dirft. 
 	 */
 	private function expire_token($time) {
-		return time() + $time - $this->expire_drift;
+		return time() + $time;
 	}
 
 	/**
@@ -439,4 +439,3 @@ class CheckfrontAPI {
 		$this->session_id = 0; 
 	}
 }
-?>
