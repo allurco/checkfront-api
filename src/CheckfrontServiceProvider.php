@@ -3,6 +3,7 @@
 namespace Allurco\Checkfront;
 
 use Illuminate\Support\ServiceProvider;
+use Allurco\CheckfrontAPI;
 
 class CheckfrontServiceProvider extends ServiceProvider {
 
@@ -16,7 +17,7 @@ class CheckfrontServiceProvider extends ServiceProvider {
     
     public function register() {
 		$this->mergeConfigFrom( __DIR__.'/../config/checkfront.php', 'checkfront');
-        $this->app->singleton('checkfront', function($app) {
+        $this->app->singleton('CheckfrontAPI', function($app) {
             $config = $app->make('config');
             $host = $config->get('checkfront.host');
             $auth_type = $config->get('checkfront.auth_type');
@@ -39,6 +40,6 @@ class CheckfrontServiceProvider extends ServiceProvider {
     }
 
     public function provides() {
-        return ['checkfront'];
+        return ['CheckfrontAPI'];
     }
 }
