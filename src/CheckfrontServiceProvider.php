@@ -3,7 +3,7 @@
 namespace Allurco\Checkfront;
 
 use Illuminate\Support\ServiceProvider;
-use Allurco\CheckfrontAPI;
+use Allurco\Checkfront\CheckfrontAPI;
 
 class CheckfrontServiceProvider extends ServiceProvider {
 
