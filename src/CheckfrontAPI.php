@@ -267,7 +267,7 @@ class CheckfrontAPI {
 		$args = array(
 			'type'=>'web_server',
 			'client_id'=>$this->consumer_key,
-			'redirect_uri'=>$this->oauth_redirect_uri,
+			'redirect_uri'=>$this->redirect_uri,
 			'response_type'=>'code',
 		);
 		$url = $this->oauth_url . '/?' . http_build_query($args);
