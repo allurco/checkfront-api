@@ -64,8 +64,9 @@ class CheckfrontAPI {
 	// oauth2 only:
 	public $consumer_key;
 	private $consumer_secret;
-	private $access_token;
-	private $refresh_token;
+	public $access_token;
+	public $refresh_token;
+	public $expire_token;
 
 	// token auth only:
 	private $api_key;
@@ -86,6 +87,13 @@ class CheckfrontAPI {
 
 	// use to store API keys, ideally via an extended class.  Not used for token pair auth
 	protected function store($data=array()) {
+		
+	}
+
+	public function setTokens($data) {
+		$this->access_token  = $data[0];
+		$this->refresh_token = $data[1];
+		$this->expire_token = $data[2];
 	}
 
 	// use to store session if needed for interactive integrations
