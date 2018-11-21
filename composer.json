@@ -1,6 +1,7 @@
 {
     "name": "allurco/checkfront",
     "description": "A Laravel wrapper for the Checkfront API PHP SDK",
+    "version": "1.0.0-dev",
     "license": "MIT",
     "authors": [
         {
