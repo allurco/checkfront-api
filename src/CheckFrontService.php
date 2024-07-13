@@ -6,7 +6,7 @@ use Allurco\Checkfront\CheckfrontAPI;
 
 class CheckfrontService {
 
-    private $checkfront;
+    private $checkfront; 
 
     function __construct($config=array(),$session_id='') {
         
